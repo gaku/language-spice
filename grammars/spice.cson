@@ -11,6 +11,18 @@
     'name': 'keyword'
   },
   {
+    'match': '^([rRcClL][^ ]*)\\s+([^ ]*)\\s+([^ ]*)\\s+([^ ]*)$'
+    'captures':
+      '1':
+        'name': 'variable'
+      '2':
+        'name': 'node.constant'
+      '3':
+        'name': 'node.constant'
+      '4':
+        'name': 'variable'
+  },
+  {
     'match': '\\b(tran|echo|ac)\\b'
     'captures':
       '1':
