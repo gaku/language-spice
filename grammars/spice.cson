@@ -3,10 +3,6 @@
 'fileTypes': ['CIR']
 'patterns': [
   {
-    'match': '\\b(?i:(0x\\h*))'
-    'name': 'constant.numeric.integer.hexadecimal.python'
-  },
-  {
     'match': '\\*.*$'
     'name': 'comment'
   },
