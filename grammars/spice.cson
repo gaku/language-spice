@@ -1,0 +1,44 @@
+'scopeName': 'source.spice'
+'name': 'SPICE'
+'fileTypes': ['CIR']
+'patterns': [
+  {
+    'match': '\\b(?i:(0x\\h*))'
+    'name': 'constant.numeric.integer.hexadecimal.python'
+  },
+  {
+    'match': '\\*.*$'
+    'name': 'comment'
+  },
+  {
+    'match': '^\\..*$'
+    'name': 'keyword'
+  },
+  {
+    'match': '\\b(tran|echo|ac)\\b'
+    'captures':
+      '1':
+        'name': 'entity.name.function.source'
+  },
+  {
+    'match': '\\d+(ms|us|Hz|n|Meg|K|kHz|H)'
+    'name': 'constant'
+  },
+  {
+    'begin': '"'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin'
+    'end': '"'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end'
+    'name': 'string.quoted.double'
+    'patterns': [
+      {
+        'match': '\\$[A-Za-z]*'
+        'name': 'variable'
+      }
+    ]
+  }
+]
