@@ -11,7 +11,7 @@
     'name': 'keyword'
   },
   {
-    'match': '^([rRcClL][^ ]*)\\s+([^ ]*)\\s+([^ ]*)\\s+([^ ]*)$'
+    'match': '^([rRcClLDd][^ ]*)\\s+([^ ]*)\\s+([^ ]*)\\s+([^ ]*)$'
     'captures':
       '1':
         'name': 'variable'
@@ -29,7 +29,7 @@
         'name': 'entity.name.function.source'
   },
   {
-    'match': '\\d+(ms|us|Hz|n|Meg|K|kHz|H)'
+    'match': '\\d+(ms|us|Hz|n|Meg|K|kHz|H|V)'
     'name': 'constant'
   },
   {
